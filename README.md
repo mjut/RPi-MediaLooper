@@ -100,7 +100,7 @@ To run at startup, edit `/home/pi/.config/lxsession/LXDE-pi/autostart` by typing
 
 	sudo nano /home/pi/.config/lxsession/LXDE-pi/autostart
 	
-Add `/home/pi/videoloop.sh` at the end of file
+Add `@lxterminal -e /home/pi/videoloop.sh` at the end of file
 
 When is done, press CTRL-O and enter to save and CTRL-X to exit.
 
