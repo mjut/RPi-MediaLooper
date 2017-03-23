@@ -96,9 +96,9 @@ This will run the login program with *pi* user and without any authentication.
 When is done, press CTRL-O and ENTER to save and CTRL-X to exit.
 
 ### Step 9. Add script to startup	
-To run at startup, edit `/etc/profile` by typing:
+To run at startup, edit `/home/pi/.config/lxsession/LXDE-pi/autostart` by typing:
 
-	sudo nano /etc/profile
+	sudo nano /home/pi/.config/lxsession/LXDE-pi/autostart
 	
 Add `/home/pi/videoloop.sh` at the end of file
 
