@@ -33,7 +33,7 @@ First time you boot the fresh Raspbian installation, the `raspi-config` menu wil
 
 **NOTE:** You can always open this utility again by typing `sudo raspi-config` at command line
 
-### Step 3. Fix locale warnings
+### Step 3. Fix locale warnings _not necessary?_
 Some warnings referring to locale appears when installing some packages. To fix this you have to edit `/etc/default/locale` file:
 
 	sudo nano /etc/default/locale
@@ -76,7 +76,7 @@ Put a video or audio file in a USB storage device and connect it to *Raspberry P
 	
 This should play your video in a endless loop. Press CTRL-C anytime to exit.
 	
-### Step 8. Configure autologin without password
+### Step 8. Configure autologin without password _configuration via raspi-config_
 Our system is not necessary connected to a keyboard to work and has not any sensible data, then autologin is not a problem and makes easy to run our script at startup.
 
 Edit `/etc/inittab`
@@ -100,7 +100,7 @@ To run at startup, edit `/home/pi/.config/lxsession/LXDE-pi/autostart` by typing
 
 	sudo nano /home/pi/.config/lxsession/LXDE-pi/autostart
 	
-Add `@lxterminal -e /home/pi/videoloop.sh` at the end of file
+Add `/home/pi/videoloop.sh` at the end of file
 
 When is done, press CTRL-O and enter to save and CTRL-X to exit.
 
@@ -110,7 +110,7 @@ Now you can reboot your system to test:
 	
 Script will start automatically when systems reboots.
 	
-## 	Prevent SD card from getting corrupted
+## 	Prevent SD card from getting corrupted _does not work with my RPi3 - not sure how to fix this_
 
 If your system will be placed in a environment where shutdown is done by switching power supply, the SD card can get corrupted easily if shutdown occurs while system is writing data. To prevent this situation is possible to mount all partitions with readonly flag and put logs and pids at RAM memory (erased at shutdown). 
 
