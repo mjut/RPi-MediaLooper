@@ -2,7 +2,7 @@ RPi-MediaLooper
 ===============
 Automatic looper for video or audio useful for digital posters and audiovisual installations using *Raspberry Pi* hardware. 
 
-- Looks for files stored in a USB device
+- Looks for files stored in a USB device (needs to be a fat16-format)
 - Recognized file extensions .mp4, .avi, .mkv, .mp3, .mov, .mpg, .flv, .m4v and .divx
 - Audio output is set by default to HDMI but is configurable via *config.txt* file placed on USB root
 - Automatic startup without user intervention when device is powered on
