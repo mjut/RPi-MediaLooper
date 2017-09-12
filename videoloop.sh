@@ -11,6 +11,7 @@ SAVEIFS=$IFS
 IFS=$(echo -en "\n\b")
 MEDIA_PATH=/media/usb
 AUDIO_OUTPUT=hdmi # hdmi or local
+VOLUME=0 # something between -6000 and 0
 
 # External config
 if [ -f $MEDIA_PATH/config.txt ]; then
@@ -46,7 +47,7 @@ while true; do
  else
   # For each video
   for f in `ls $MEDIA_PATH | grep ".mp4$\|.avi$\|.mkv$\|.mp3$\|.mov$\|.mpg$\|.flv$\|.m4v$\|.divx$"`; do
-     omxplayer -b --no-keys --no-osd -o $AUDIO_OUTPUT "$MEDIA_PATH/$f"
+     omxplayer -b --vol $VOLUME --no-keys --no-osd -o $AUDIO_OUTPUT "$MEDIA_PATH/$f"
   done
  fi
 done
