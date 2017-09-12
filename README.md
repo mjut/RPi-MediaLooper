@@ -76,24 +76,9 @@ Put a video or audio file in a USB storage device and connect it to *Raspberry P
 	
 This should play your video in a endless loop. Press CTRL-C anytime to exit.
 	
-### Step 8. Configure autologin without password _configuration via raspi-config_
-Our system is not necessary connected to a keyboard to work and has not any sensible data, then autologin is not a problem and makes easy to run our script at startup.
+### Step 8. deactivate SSH
 
-Edit `/etc/inittab`
-
-	sudo nano /etc/inittab
-
-Disable the getty program by adding `#` to comment this line:
-
-	#1:2345:respawn:/sbin/getty 115200 tty1
-
-Add login program to inittab adding the following line just below the commented line
-	
-	1:2345:respawn:/bin/login -f pi tty1 </dev/tty1 >/dev/tty1 2>&1
-
-This will run the login program with *pi* user and without any authentication.
-
-When is done, press CTRL-O and ENTER to save and CTRL-X to exit.
+	sudo raspi-config
 
 ### Step 9. Add script to startup	
 To run at startup, edit `/home/pi/.config/lxsession/LXDE-pi/autostart` by typing:
