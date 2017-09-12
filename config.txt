@@ -2,3 +2,8 @@
 # choose HDMI audio or local jack stereo connector
 # Possible values are 'local' or 'hdmi' (default)
 AUDIO_OUTPUT=local 
+
+# Something between -6000 and 0
+# -6000 equals 0%
+# 0 equals 100%
+VOLUME=0
